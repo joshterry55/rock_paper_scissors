@@ -41,7 +41,13 @@ body {
 }
 
 
+.red-result {
+  text-shadow: 2px 2px red
+}
 
+.green-result {
+  text-shadow: 2px 2px green
+}
 
 .valign {
   margin: 0 auto !important;

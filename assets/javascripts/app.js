@@ -10,6 +10,9 @@ var scissorsImage = document.createElement("img");
 var rockImage2 = document.createElement("img");
 var paperImage2 = document.createElement("img");
 var scissorsImage2 = document.createElement("img");
+var rockImage3 = document.createElement("img");
+var paperImage3 = document.createElement("img");
+var scissorsImage3 = document.createElement("img");
 var win = document.getElementById('win');
 var lose = document.getElementById('lose');
 var winNumber = 0
@@ -24,10 +27,18 @@ var totalScissors = 0
 var rockWin = 0
 var paperWin = 0
 var scissorsWin = 0
+var colorSwitch = document.getElementById("result")
+
+
+
+
+
 
 rock.addEventListener('click', function() {
+  colorSwitch.className = ''
   totalRock += 1
   clearSelection();
+  clearResult();
   setTimeout(clearResult1, 500)
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
@@ -60,8 +71,10 @@ function scissorsPercentage() {
 }
 
 paper.addEventListener('click', function() {
+  colorSwitch.className = ''
   totalPaper += 1
   clearSelection();
+  clearResult();
   setTimeout(clearResult1, 500)
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
@@ -82,8 +95,10 @@ paper.addEventListener('click', function() {
 });
 
 scissors.addEventListener('click', function() {
+  colorSwitch.className = ''
   totalScissors += 1
   clearSelection();
+  clearResult();
   setTimeout(clearResult1, 500)
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
@@ -141,11 +156,13 @@ function winOrLose() {
       result.innerText = "It's a Tie!"
       break;
       case 'paper':
+      colorSwitch.className = "red-result"
       lose.innerText = loseNumber += 1
       result.innerText = "You Lost!"
       break;
       case 'scissors':
       win.innerText = winNumber += 1
+      colorSwitch.className = "green-result"
       result.innerText = "You Won!"
       rockWin += 1
       break;
@@ -153,6 +170,7 @@ function winOrLose() {
   } else if(userSelection === 'paper') {
     switch(choice) {
       case 'rock':
+      colorSwitch.className = "green-result"
       win.innerText = winNumber += 1
       result.innerText = "You Won!"
       paperWin += 1
@@ -161,6 +179,7 @@ function winOrLose() {
       result.innerText = "It's a Tie!"
       break;
       case 'scissors':
+      colorSwitch.className = "red-result"
       lose.innerText = loseNumber += 1
       result.innerText = "You Lost!"
       break;
@@ -168,10 +187,12 @@ function winOrLose() {
   } else if(userSelection === 'scissors') {
     switch(choice) {
       case 'rock':
+      colorSwitch.className = "red-result"
       lose.innerText = loseNumber += 1
       result.innerText = "You Lost!"
       break;
       case 'paper':
+      colorSwitch.className = "green-result"
       win.innerText = winNumber += 1
       result.innerText = "You Won!"
       scissorsWin += 1
@@ -182,17 +203,31 @@ function winOrLose() {
     }
   }
 }
-
+function clearResult(){
+  result.innerText = ''
+}
 function clearResult1() {
-  result.innerText = '.'
+  result.innerText = ''
+  rockImage3.src = 'assets/images/rock3.png'
+  result.appendChild(rockImage3)
 }
 
 function clearResult2() {
-  result.innerText = '..'
+  result.innerText = ''
+  // rockImage3.src = 'assets/images/rock3.png'
+  paperImage3.src = 'assets/images/paper3.png'
+  // result.appendChild(rockImage3)
+  result.appendChild(paperImage3)
 }
 
 function clearResult3() {
-  result.innerText = '...'
+  result.innerText = ''
+  // rockImage3.src = 'assets/images/rock3.png'
+  // paperImage3.src = 'assets/images/paper3.png'
+  scissorsImage3.src = 'assets/images/scissors3.png'
+  // result.appendChild(rockImage3)
+  // result.appendChild(paperImage3)
+  result.appendChild(scissorsImage3)
 }
 
 function clearSelection() {
