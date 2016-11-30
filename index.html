@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel='stylesheet' href='assets/stylesheets/app.css' >
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+  </head>
+  <body class='container'>
+    <h1 class='center'>Rock, Paper, <br>Scissors</h1>
+    <hr>
+    <div class="clearfloat">
+      <h3 class='center' id='result'></h3>
+    </div>
+    <div class='winlosefloat'>
+      <h4 class="btn green">Win: <span id="win"></span></h4>
+    </div>
+    <div class='winlosefloat'>
+      <h4 class='btn red'>Lose: <span id="lose"></span></h4>
+    </div>
+    <div class='floatleft3 valign-wrapper'>
+      <div class="valign">
+        <img src='assets/images/rock.png' class='option' id="rock">
+      </div>
+    </div>
+
+    <div class='floatleft3 valign-wrapper'>
+      <div class='valign'>
+        <img src='assets/images/paper.png' class='option' id="paper">
+      </div>
+    </div>
+
+    <div class='floatleft3 valign-wrapper'>
+      <div class='valign'>
+        <img src='assets/images/scissors.png' class='option' id="scissors">
+      </div>
+    </div>
+    <div class='floatleft2 valign-wrapper'>
+      <div class="valign">
+        <h6 class='center btn blue'>Rock Win: <span id="rock-perc"></span></h6>
+      </div>
+    </div>
+
+    <div class='floatleft2 valign-wrapper'>
+      <div class='valign'>
+        <h6 class='center btn blue'>Paper Win: <span id="paper-perc"></span></h6>
+      </div>
+    </div>
+
+    <div class='floatleft2 valign-wrapper'>
+      <div class='valign'>
+        <h6 class='center btn blue'>Scissors Win: <span id="scissors-perc"></span></h6>
+      </div>
+    </div>
+
+  
+
+    <div class='winnerfloat'>
+        <h4 class='center'>Your Choice: </h4><br>
+        <div id="your-choice" class=''>
+        </div>
+    </div>
+
+    <div class='winnerfloat'>
+        <h4 class='center'>Computer Choice: </h4><br>
+        <div id='comp-choice' class=''>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="assets/javascripts/app.js"></script>
+  </body>
+</html>

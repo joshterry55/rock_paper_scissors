@@ -1,0 +1,56 @@
+body {
+  background-color: gray !important;
+  font-family: 'Bungee Inline', cursive;
+}
+
+.floatleft3 {
+  float: left;
+  width: 33%;
+  height: 250px;
+}
+
+.floatleft2 {
+  float: left;
+  width: 33%;
+  height: 50px;
+}
+
+.winnerfloat {
+  float: left;
+  width: 50%;
+  height: 350px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.winlosefloat {
+  float: left;
+  width: 50%;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clearfloat {
+  clear: both;
+  height: 40px;
+}
+
+.btn {
+
+}
+
+
+
+
+.valign {
+  margin: 0 auto !important;
+}
+
+.mycenter {
+  margin: 0 auto !important;
+}
+
+.option:hover {
+  cursor: pointer;
+}
