@@ -32,7 +32,7 @@ rock.addEventListener('click', function() {
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
   userSelection = "rock"
-  rockImage.src = 'assets/images/rock.png'
+  rockImage.src = 'assets/images/rock2.png'
   yourSelection.appendChild(rockImage);
   choice = computerChoice();
   if(choice == 'rock'){
@@ -44,7 +44,7 @@ rock.addEventListener('click', function() {
   }
   // winOrLose();
   setTimeout(winOrLose, 2000)
-  rockPercentage();
+  setTimeout(rockPercentage, 2000);
 });
 
 function rockPercentage() {
@@ -66,7 +66,7 @@ paper.addEventListener('click', function() {
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
   userSelection = 'paper'
-  paperImage.src = 'assets/images/paper.png'
+  paperImage.src = 'assets/images/paper2.png'
   yourSelection.appendChild(paperImage);
   choice = computerChoice();
   if(choice == 'rock'){
@@ -78,7 +78,7 @@ paper.addEventListener('click', function() {
   }
   // winOrLose();
   setTimeout(winOrLose, 2000)
-  paperPercentage();
+  setTimeout(paperPercentage,2000);
 });
 
 scissors.addEventListener('click', function() {
@@ -88,7 +88,7 @@ scissors.addEventListener('click', function() {
   setTimeout(clearResult2, 1000)
   setTimeout(clearResult3, 1500)
   userSelection = 'scissors'
-  scissorsImage.src = 'assets/images/scissors.png'
+  scissorsImage.src = 'assets/images/scissors2.png'
   yourSelection.appendChild(scissorsImage);
   choice = computerChoice();
 
@@ -101,36 +101,36 @@ scissors.addEventListener('click', function() {
   }
   // winOrLose()
   setTimeout(winOrLose, 2000)
-  scissorsPercentage();
+  setTimeout(scissorsPercentage, 2000);
 });
 
 function addCompRock() {
-  rockImage.src = 'assets/images/rock.png'
+  rockImage.src = 'assets/images/rock2.png'
   compSelection.appendChild(rockImage);
 }
 
 function addCompPaper() {
-  paperImage.src = 'assets/images/paper.png'
+  paperImage.src = 'assets/images/paper2.png'
   compSelection.appendChild(paperImage);
 }
 
 function addCompScissors() {
-  scissorsImage.src = 'assets/images/scissors.png'
+  scissorsImage.src = 'assets/images/scissors2.png'
   compSelection.appendChild(scissorsImage);
 }
 
 function addCompScissors2() {
-  scissorsImage2.src = 'assets/images/scissors.png'
+  scissorsImage2.src = 'assets/images/scissors2.png'
   compSelection.appendChild(scissorsImage2);
 }
 
 function addCompPaper2() {
-  paperImage2.src = 'assets/images/paper.png'
+  paperImage2.src = 'assets/images/paper2.png'
   compSelection.appendChild(paperImage2);
 }
 
 function addCompRock2() {
-  rockImage2.src = 'assets/images/rock.png'
+  rockImage2.src = 'assets/images/rock2.png'
   compSelection.appendChild(rockImage2);
 }
 
